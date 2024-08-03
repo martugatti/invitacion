@@ -1,28 +1,12 @@
- body {
-	 background-color: #a8e2ff;
-	 width: 100vw;
-	 height: 100vh;
-	 display: flex;
-	 flex-direction: column;
-	 justify-content: center;
-	 align-items: flex-start;
-	 align-content: space-between;
-}
- .envlope-wrapper {
-	 height: 90vh;
-	 width: 100vw;
-	 display: flex;
-	 align-items: end;
-	 justify-content:center;
-}
-
 #envelope {
 	 position: relative;
-	 width: 500px;
+	 width: 400px;
 	 height: 250px;
 	 border-bottom-left-radius: 6px;
 	 border-bottom-right-radius: 6px;
-	 top: 0;
+	 margin-left: auto;
+	 margin-right: auto;
+	 top: 40%;
 	 background-color: #00334c;
 	 box-shadow: 0 4px 20px rgba(0, 0, 0, .2);
 	 
@@ -46,25 +30,30 @@
 	 z-index: 3;
 }
 
+.front:after {
+	height: 100px;
+	width: 100px;
+	background:red;
+}
+
 .imagen {
 	width: 100%;
-	height: 100%;
-	object-fit: contain;
+	content-fill: contain;
 }
 
  .flap {
-	 border-left: 250px solid transparent;
-	 border-right: 250px solid transparent;
-	 border-bottom: 125px solid transparent;
+	 border-left: 200px solid transparent;
+	 border-right: 200px solid transparent;
+	 border-bottom: 122px solid transparent;
 	/* a little smaller */
-	 border-top: 125px solid #00334c;
+	 border-top: 128px solid #00334c;
 	/* a little larger */
 	 transform-origin: top;
 	 pointer-events: none;
 }
  .pocket {
-	 border-left: 250px solid #0077b2;
-	 border-right: 250px solid #0077b2;
+	 border-left: 200px solid #0077b2;
+	 border-right: 200px solid #0077b2;
 	 border-bottom: 125px solid #006da3;
 	 border-top: 125px solid transparent;
 	 border-bottom-left-radius: 6px;
@@ -225,14 +214,15 @@
 		 margin-left: 50px;
 	}
 }
+ body {
+	 background-color: #a8e2ff;
+}
+ .envlope-wrapper {
+	 height: 1000px;
+}
 
  .reset {
 	 text-align: center;
-	 height: 20vh;
-	 width: 100%;
-	 display: flex;
-	 align-items:center;
-	 justify-content: center;
 }
  .reset button {
 	 font-weight: 800;
@@ -258,8 +248,3 @@
 	 color: #fff;
 }
  
- @media only screen and (max-width: 500px) {
-  body {
-    background-color: red;
-  }
-}
